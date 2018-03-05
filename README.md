@@ -14,7 +14,11 @@ The *primordials* are those objects, other than the global object, that are mand
 There are now several proposals which would introduce special powers, analogous to *system-mode-like* powers. 
    * WeakReferences make garbage collection observable, and opens a new side channel that other's can signal merely by dropping a reference to an otherwise-powerless immutable object.
    * Error stacks make visible a traceback of the stack captured by an Error object on creation.
-   * A loader instance can be use to cause I/O to the external world.
+   * A [loader instance](https://github.com/whatwg/loader/issues/34) can be used to cause I/O to the external world.
+
+In addition, we have the following candidates for inclusion on the System object
+   * The global object
+   * Various branders
    
 These ocap environments need to censor or virtualize each of these. Over time, we can expect more such special powers to be introduced to the standard. TODO more
 
